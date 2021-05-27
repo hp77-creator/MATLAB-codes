@@ -1,0 +1,10 @@
+clc;
+Vph=input("Enter phase voltage on source side(star, in volts)");
+Vline=Vph*sqrt(3);
+P=input("Enter the power consumed on load side(star, in watts)");
+Pph=P/3;
+pf=input("Enter the power factor");
+Iph=Pph/(Vph*pf);
+Iline=Iph;
+fprintf("Line current is %f + j%f \n", real(ILine), imaginary(ILine));
+fprintf("Line Voltage is %f + j%f \n", real(Vline), imaginary(Vline));

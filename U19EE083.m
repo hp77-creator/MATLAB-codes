@@ -1,0 +1,12 @@
+V = input('Enter Volage Value: ');
+I_b = input('Enter Current Value: ');
+f = input('Enter Frequency Value: ');
+pf = input('Enter Power Factor Value: ');
+pf_new = input('Enter New Power Factor Value: ');
+Ima = I_b*pf;
+Inew = Ima/pf_new;
+Imr = I_b*sin(acos(pf));
+Inewr = Inew*sin(acos(pf_new));
+Ic = abs(Inewr - Imr);
+C = Ic/(400*2*3.14*50);
+fprintf('Hence Capcitance Of The Capacitor To Be Added Is %d C', C );
